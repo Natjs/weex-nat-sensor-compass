@@ -1,15 +1,15 @@
 //
-//  NatWeexCompass.m
+//  WeexNatCompass.m
 //
 //  Created by huangyake on 17/1/7.
 //  Copyright © 2017 Nat. All rights reserved.
 //
 
 
-#import "NatWeexCompass.h"
+#import "WeexNatCompass.h"
 #import "NatCompass.h"
 
-@implementation NatWeexCompass
+@implementation WeexNatCompass
 WX_EXPORT_METHOD(@selector(get:))
 WX_EXPORT_METHOD(@selector(watch::))
 WX_EXPORT_METHOD(@selector(clearWatch:))
