@@ -1,12 +1,15 @@
 # nat-sensor-compass
 
+- [Documentation](http://natjs.com/#/#compass)
+- [Github](https://github.com/natjs/weex-nat-sensor-compass)
+
 ## Installation
 ```
 weexpack plugin add nat-sensor-compass
 ```
 
 ```
-npm install weex-nat --save
+npm install natjs --save
 ```
 
 ## Usage
@@ -15,7 +18,7 @@ Use in weex file (.we)
 
 ```html
 <script>
-import 'Nat' from 'weex-nat'
+import 'Nat' from 'natjs'
 
 // get
 Nat.compass.get((err, ret) => {
