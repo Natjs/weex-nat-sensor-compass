@@ -1,19 +1,18 @@
 {
-  "name": "nat-sensor-compass",
-  "version": "0.1.2",
-  "description": "Nat.js module: Compass",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [
-    "Nat",
-    "sensor",
-    "compass",
-    "Weex",
-    "Plugin",
-    "module",
-    "handle"
-  ],
-  "author": "Acathur",
-  "license": "MIT"
+    "version": "0.1.4",
+    "platform": [
+        "ios",
+        "android"
+    ],
+    "description": "Nat.js module: Compass",
+    "keywords": [
+        "weex",
+        "plugin",
+        "nat",
+        "natjs",
+        "sensor",
+        "compass"
+    ],
+    "license": "MIT",
+    "name": "nat-sensor-compass"
 }
