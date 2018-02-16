@@ -29,7 +29,7 @@ WX_EXPORT_METHOD(@selector(clearWatch:))
     }];
 }
 
-- (void)watch:(NSDictionary *)options :(WXKeepAliveCallback)callback{
+- (void)watch:(NSDictionary *)options :(WXModuleKeepAliveCallback)callback{
     [[NatCompass singletonManger] watch:options :^(id error,id result) {
         if (callback) {
             if (error) {

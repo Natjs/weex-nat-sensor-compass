@@ -11,7 +11,7 @@
 @protocol NatSensorCompassPro <WXModuleProtocol>
 
 - (void)get:(WXModuleCallback)callback;
-- (void)watch:(NSDictionary *)options :(WXKeepAliveCallback)callback;
+- (void)watch:(NSDictionary *)options :(WXModuleKeepAliveCallback)callback;
 - (void)clearWatch:(WXModuleCallback)callback;
 
 @end
