@@ -1,27 +1,28 @@
 //
-//  WeexNatCompass.m
+//  WeexNatSensorCompass.m
 //
 //  Created by huangyake on 17/1/7.
 //  Copyright © 2017 Instapp. All rights reserved.
 //
 
 
-#import "WeexNatCompass.h"
-#import "NatCompass.h"
+#import "WeexNatSensorCompass.h"
+#import <WeexPluginLoader/WeexPluginLoader.h>
+#import <NatCompass/NatCompass.h>
 
-@implementation WeexNatCompass
+@implementation WeexNatSensorCompass
+
+WX_PlUGIN_EXPORT_MODULE(nat/sensor/compass, WeexNatSensorCompass)
 WX_EXPORT_METHOD(@selector(get:))
 WX_EXPORT_METHOD(@selector(watch::))
 WX_EXPORT_METHOD(@selector(clearWatch:))
 
 - (void)get:(WXModuleCallback)callback{
     [[NatCompass singletonManger] get:^(id error,id result) {
-        if (error) {
-            if (callback) {
+        if (callback) {
+            if (error) {
                 callback(error);
-            }
-        }else{
-            if (callback) {
+            } else {
                 callback(result);
             }
         }
@@ -30,13 +31,11 @@ WX_EXPORT_METHOD(@selector(clearWatch:))
 
 - (void)watch:(NSDictionary *)options :(WXKeepAliveCallback)callback{
     [[NatCompass singletonManger] watch:options :^(id error,id result) {
-        if (error) {
-            if (callback) {
-                callback(error,YES);
-            }
-        }else{
-            if (callback) {
-                callback(result,YES);
+        if (callback) {
+            if (error) {
+                callback(error, YES);
+            } else {
+                callback(result, YES);
             }
         }
     }];
@@ -44,12 +43,10 @@ WX_EXPORT_METHOD(@selector(clearWatch:))
 
 - (void)clearWatch:(WXModuleCallback)callback{
     [[NatCompass singletonManger] clearWatch:^(id error,id result) {
-        if (error) {
-            if (callback) {
+        if (callback) {
+            if (error) {
                 callback(error);
-            }
-        }else{
-            if (callback) {
+            } else {
                 callback(result);
             }
         }
