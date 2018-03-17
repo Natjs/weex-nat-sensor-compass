@@ -1,6 +1,6 @@
 {
   "name": "nat-sensor-compass",
-  "version": "1.0.0-alpha",
+  "version": "1.0.0-alpha.1",
   "main": "./js/build/main.js",
   "description": "Nat.js module for weex: Compass",
   "license": "MIT",
